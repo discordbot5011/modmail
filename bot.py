@@ -219,7 +219,7 @@ class Modmail(commands.Bot):
         user_id = int(ctx.channel.topic.split(': ')[1])
         user = self.get_user(user_id)
         em = discord.Embed(title='Thread Closed')
-        em.description = f'**{ctx.author}** has closed this modmail session.'
+        em.description = f'The moderators have closed this thread.'
         em.color = discord.Color.red()
         try:
             await user.send(embed=em)
